@@ -175,8 +175,8 @@
   #fundacion { padding: 120px 0; background: var(--crema); position: relative; }
   .fundacion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 
-  .section-label { font-size: 9px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--rojo); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
-  .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--rojo); }
+  .section-label { font-size: 13px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rojo); margin-bottom: 24px; display: flex; align-items: center; gap: 14px; }
+  .section-label::before { content: ''; display: block; width: 28px; flex-shrink: 0; height: 2px; background: var(--rojo); }
   .section-title { font-family: var(--serif); font-size: clamp(36px, 4vw, 54px); font-weight: 300; line-height: 1.1; color: var(--negro); margin-bottom: 24px; }
   .section-title em { color: var(--rojo); font-style: italic; }
   .section-body { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--gris-institucional); margin-bottom: 24px; }
@@ -521,6 +521,7 @@
   nav.menu-open { z-index: 600; background: linear-gradient(to right, var(--negro) calc(100% - min(300px, 82vw)), transparent 0); border-bottom-color: transparent; backdrop-filter: none; }
   nav.menu-open .nav-logo { opacity: 0; pointer-events: none; }
   .nav-logo { transition: opacity 0.2s; }
+  @media (max-width: 600px) { .section-label { font-size: 12px; letter-spacing: 0.18em; } }
   @media (max-width: 400px) { .nav-logo-img { height: 40px; } }
 </style>
 </head>

@@ -539,6 +539,36 @@
   .nav-logo { transition: opacity 0.2s; }
   @media (max-width: 600px) { .section-label, .declaracion-eyebrow, .contacto-eyebrow { font-size: 12px; letter-spacing: 0.18em; } }
   @media (max-width: 400px) { .nav-logo-img { height: 40px; } }
+
+  /* ===== Imágenes del programa (fundaciongradomusical.es) ===== */
+  .hero-image-placeholder {
+    background-image:
+      radial-gradient(55% 45% at 50% 45%, rgba(12,10,10,.74) 0%, rgba(12,10,10,.45) 70%, rgba(12,10,10,0) 100%),
+      linear-gradient(180deg, rgba(14,12,12,.50) 0%, rgba(14,12,12,.45) 50%, rgba(10,10,10,.85) 100%),
+      linear-gradient(rgba(197,34,46,.38), rgba(158,26,36,.38)),
+      url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-006.webp');
+    background-size: cover; background-position: 45% center;
+    background-blend-mode: normal, normal, multiply, normal;
+  }
+  .hero-image-placeholder .badge-circle { border-color: rgba(232,80,91,.85); }
+  .hero-image-placeholder .hero-badge-title, .hero-image-placeholder .hero-badge-words { text-shadow: 0 1px 10px rgba(0,0,0,.55); }
+  .hero-cien { text-align: center; position: relative; z-index: 2; }
+  .hero-cien .cien-num { font-size: 75px; }
+  .hero-cien .cien-text { margin: 10px 0 0; line-height: 1.7; text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+  .foto-ancho { margin: 0; height: min(62vw, 620px); background: url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-012.webp') center 55% / cover; }
+  .programa-card-img { height: 190px; margin: -48px -40px 28px; background-size: cover; background-position: center; }
+  .aportacion-visual-bg { background: linear-gradient(135deg, rgba(120,14,24,.86), rgba(26,26,26,.80)), url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-010.webp') center / cover; }
+  .impacto-mosaico { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 220px 220px; gap: 8px; margin: 0 0 56px; }
+  .impacto-mosaico div { background-size: cover; background-position: center; }
+  .impacto-mosaico div:first-child { grid-row: span 2; }
+  .impacto-mosaico div:nth-child(2) { grid-column: span 2; }
+  @media (max-width: 760px) {
+    .impacto-mosaico { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 140px 140px; }
+    .impacto-mosaico div:first-child { grid-column: span 2; grid-row: auto; }
+    .impacto-mosaico div:nth-child(2) { grid-column: auto; }
+    .foto-ancho { height: 280px; }
+    .programa-card-img { margin: -48px -40px 24px; }
+  }
 </style>
 </head>
 <body>
@@ -620,9 +650,10 @@
 
       <div class="hero-badge-wrap">
         <div class="badge-circle">
-          <div class="badge-big">100</div>
-          <div class="badge-mid">% al proyecto</div>
-          <div class="badge-sub">cada euro donado</div>
+          <div class="hero-cien">
+            <div class="cien-num"><span>100</span>%</div>
+            <div class="cien-text">de tu aportación<br>al proyecto</div>
+          </div>
         </div>
         <div style="text-align:center;">
           <div class="hero-badge-title">Práctica colectiva</div>
@@ -718,6 +749,9 @@
   </div>
 </section>
 
+<figure class="foto-ancho" role="img" aria-label="Agrupación escolar completa en el escenario"></figure>
+
+
 <!-- ─── 4. EL PROGRAMA ───────────────────────── -->
 <section id="programa">
   <div class="container">
@@ -733,7 +767,7 @@
 
     <div class="programa-grid">
       <div class="programa-card reveal reveal-delay-1">
-        <div class="programa-card-num">01</div>
+        <div class="programa-card-img" role="img" aria-label="Alumno tocando el violín" style="background-image:url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-002.webp')"></div>
         <div class="programa-card-icon">
           <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
         </div>
@@ -745,7 +779,7 @@
       </div>
 
       <div class="programa-card reveal reveal-delay-2">
-        <div class="programa-card-num">02</div>
+        <div class="programa-card-img" role="img" aria-label="Agrupación escolar en concierto" style="background-image:url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-006.webp')"></div>
         <div class="programa-card-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
@@ -757,7 +791,7 @@
       </div>
 
       <div class="programa-card reveal reveal-delay-3">
-        <div class="programa-card-num">03</div>
+        <div class="programa-card-img" role="img" aria-label="Concierto de orquesta escolar con público" style="background-image:url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-009.webp')"></div>
         <div class="programa-card-icon">
           <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
         </div>
@@ -846,6 +880,13 @@
       <div class="section-label" style="justify-content:center;">Por qué importa</div>
       <h2 class="section-title" style="text-align:center;">De tocar juntos<br>a <em>construir comunidad.</em></h2>
       <p class="section-body" style="text-align:center;max-width:600px;margin:0 auto;">La práctica colectiva entrena, a la vez, lo musical y lo humano. Esto es lo que una agrupación construye en quienes la forman —y en todo lo que la rodea.</p>
+    </div>
+
+    <div class="impacto-mosaico reveal" role="img" aria-label="Alumnos tocando en orquestas y agrupaciones escolares">
+      <div style="background-image:url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-007.webp')"></div>
+      <div style="background-image:url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-001.webp')"></div>
+      <div style="background-image:url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-004.webp')"></div>
+      <div style="background-image:url('https://www.fundaciongradomusical.es/wp-content/uploads/2026/09/carrusel-orquestas-y-agrupaciones-008.webp')"></div>
     </div>
 
     <div class="stats-grid">
